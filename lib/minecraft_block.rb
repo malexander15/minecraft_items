@@ -4,10 +4,8 @@ require 'block_types'
 class MinecraftBlock
   class << self
     include BlockTypes
-    
     def types
-      binding.irb
-      "#{self.name.underscore}_types".upcase.safe_constantize
+      return WOOD_TYPES if self.name.to_s == 'MinecraftWood'
     end
   end
 end
