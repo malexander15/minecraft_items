@@ -1,7 +1,7 @@
 require 'active_support/core_ext/string'
 require 'block_types'
 
-class MinecraftBlock
+class Minecraft
   class << self
     include BlockTypes
     def types
