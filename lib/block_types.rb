@@ -11,7 +11,7 @@ module BlockTypes
   REDSTONE_TYPES = ["redstone ores", "redstone wiring", "power sources", "container blocks", "pistons", "sticky blocks", 'rails', "iron doors", "other"]
   WOOD_TYPES = ["oak", "spruce", "birch", "jungle", "acacia", "dark oak", "mangrove", "crimson", "warped"].freeze
   STONE_TYPES = ["Stone", "stone brick", "sandstone", "red sandstone", "Cobblestone", "Stone Brick", "Andesite", "Polished Andesite", "Diorite", "Polished Diorite", "Granite", "Polished Granite",  "Brick", "Deepslate" ,"Mud", "dripstone", "mossy stone"].freeze
-  TERRACOTTA_TYPES = ["black", "blue", "brown", "cyan", "gray", "green", "light blue", "light gray", "lime", "magenta", "orange", "pink", "purple", "red", "plain", "white", "yellow"]
-  GLAZED_TERRACOTTA_TYPES = ["black", "blue", "brown", "cyan", "gray", "green", "light blue", "light gray", "lime", "magenta", "orange", "pink", "purple", "red", "white", "yellow"]
-  UTILITY_TYPES = ["containers", "shulkers", "workstations", "bed"]
+  TERRACOTTA_TYPES = ["black", "blue", "brown", "cyan", "gray", "green", "light blue", "light gray", "lime", "magenta", "orange", "pink", "purple", "red", "plain", "white", "yellow"].freeze
+  GLAZED_TERRACOTTA_TYPES = ["black", "blue", "brown", "cyan", "gray", "green", "light blue", "light gray", "lime", "magenta", "orange", "pink", "purple", "red", "white", "yellow"].freeze
+  UTILITY_TYPES = ["containers", "shulkers", "workstations", "bed"].freeze
 end
