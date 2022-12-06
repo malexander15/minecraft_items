@@ -3,7 +3,7 @@ module BlockTypes
   CONCRETE_TYPES = ["concrete", "concete powder"].freeze
   DIRT_TYPES = ["clay", "coarse dirt", "dirt", "dirt path", "farmland", "grass block", "gravel", "mud", "mycelium", "podzol", "red sand", "rooted dirt", "sand"].freeze
   END_TYPES = ["chorus", "end stone", "purpur"].freeze
-  GLASS_TYPES = ["glass", "stained glass", "glass pane", "stained glass pane"].freeze
+  GLASS_TYPES = ["glass block", "glass pane"].freeze
   LIGHT_TYPES = ["candles", "end and nether", "froglights", "lanterns and lamps", "underwater", "torches"].freeze
   MINERAL_TYPE = ["iron", "gold", "diamond", "emerald", "amethyst", "lapis lazuli", "obsidian", "coal", "copper"].freeze
   NETHTER_TYPES = ["basalt", "blackstone", "crimson", "nether quartz", "netherrack", "soul and magma", "nether wart", "warped"].freeze

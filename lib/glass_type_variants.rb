@@ -1,0 +1,5 @@
+module
+	GLASS_BLOCK_VARIANT = ["Glass", "Black Stained Glass", "Blue Stained Glass", "Brown Stained Glass", "Cyan Stained Glass",
+"Gray Stained Glass", "Green Stained Glass", "Light Blue Stained Glass", "Light Gray Stained Glass", "Lime Stained Glass", "Magenta Stained Glass",	"Orange Stained Glass", "Pink Stained Glass", "Purple Stained Glass", "Red Stained Glass", "White Stained Glass", "Yellow Stained Glass" ].freeze
+	GLASS_PANE_VARIANT = ["Glass Pane", "Black Stained Glass Pane", "Blue Stained Glass Pane", "Brown Stained Glass Pane", "Cyan Stained Glass Pane", "Gray Stained Glass Pane", "Green Stained Glass Pane", "Light Blue Stained Glass Pane", "Light Gray Stained Glass Pane", "Lime Stained Glass Pane", "Magenta Stained Glass Pane",	"Orange Stained Glass Pane", "Pink Stained Glass Pane", "Purple Stained Glass Pane", "Red Stained Glass Pane", "White Stained Glass Pane", "Yellow Stained Glass Pane"].freeze
+end
