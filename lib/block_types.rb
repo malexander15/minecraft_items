@@ -13,5 +13,5 @@ module BlockTypes
   STONE_TYPES = ["Stone", "stone brick", "sandstone", "red sandstone", "Cobblestone", "Stone Brick", "Andesite", "Polished Andesite", "Diorite", "Polished Diorite", "Granite", "Polished Granite",  "Brick", "Deepslate" ,"Mud", "dripstone", "mossy stone"].freeze
   TERRACOTTA_TYPES = ["black", "blue", "brown", "cyan", "gray", "green", "light blue", "light gray", "lime", "magenta", "orange", "pink", "purple", "red", "plain", "white", "yellow"].freeze
   GLAZED_TERRACOTTA_TYPES = ["black", "blue", "brown", "cyan", "gray", "green", "light blue", "light gray", "lime", "magenta", "orange", "pink", "purple", "red", "white", "yellow"].freeze
-  UTILITY_TYPES = ["containers", "shulkers", "workstations", "bed"].freeze
+  UTILITY_TYPES = ["containers", "shulker", "workstations", "bed"].freeze
 end
