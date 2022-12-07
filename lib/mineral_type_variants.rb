@@ -1,4 +1,4 @@
-module
+module MineralTypeVariants
 	IRON_VARIANTS = ["Block of Iron", "Block of Raw Iron", "Chain", "Deepslate Iron Ore",
 		"Iron Bars", "Iron Ore"].freeze
 	GOLD_VARIANTS = ["Block of Gold", "Block of Raw Gold", "Deepslate Gold Ore", "Gold Ore"].freeze
