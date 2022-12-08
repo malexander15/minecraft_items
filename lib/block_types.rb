@@ -3,7 +3,7 @@ module BlockTypes
   CONCRETE_TYPES = ["concrete", "concete powder"].freeze
   DIRT_TYPES = ["clay", "coarse dirt", "dirt", "dirt path", "farmland", "grass block", "gravel", "mud", "mycelium", "podzol", "red sand", "rooted dirt", "sand"].freeze
   END_TYPES = ["chorus", "end stone", "purpur"].freeze
-  GLASS_TYPES = ["glass", "stained glass", "glass pane", "stained glass pane"].freeze
+  GLASS_TYPES = ["glass block", "glass pane"].freeze
   LIGHT_TYPES = ["candles", "end and nether", "froglights", "lanterns and lamps", "underwater", "torches"].freeze
   MINERAL_TYPE = ["iron", "gold", "diamond", "emerald", "amethyst", "lapis lazuli", "obsidian", "coal", "copper"].freeze
   NETHTER_TYPES = ["basalt", "blackstone", "crimson", "nether quartz", "netherrack", "soul and magma", "nether wart", "warped"].freeze
@@ -13,5 +13,5 @@ module BlockTypes
   STONE_TYPES = ["Stone", "stone brick", "sandstone", "red sandstone", "Cobblestone", "Stone Brick", "Andesite", "Polished Andesite", "Diorite", "Polished Diorite", "Granite", "Polished Granite",  "Brick", "Deepslate" ,"Mud", "dripstone", "mossy stone"].freeze
   TERRACOTTA_TYPES = ["black", "blue", "brown", "cyan", "gray", "green", "light blue", "light gray", "lime", "magenta", "orange", "pink", "purple", "red", "plain", "white", "yellow"].freeze
   GLAZED_TERRACOTTA_TYPES = ["black", "blue", "brown", "cyan", "gray", "green", "light blue", "light gray", "lime", "magenta", "orange", "pink", "purple", "red", "white", "yellow"].freeze
-  UTILITY_TYPES = ["containers", "shulkers", "workstations", "bed"].freeze
+  UTILITY_TYPES = ["containers", "shulker", "workstations", "bed"].freeze
 end
