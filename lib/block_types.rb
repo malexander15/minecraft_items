@@ -1,3 +1,4 @@
 module BlockTypes
-  require_all 'concerns/*.rb'
+  # require all block types here
+  MINECRAFT_WOOD_TYPES = ["oak", "spruce", "birch", "jungle", "acacia", "dark oak", "mangrove", "crimson", "warped"]
 end
