@@ -65,13 +65,12 @@ describe Minecraft do
       utility_types = ["containers", "shulkers", "workstations", "bed"]
       expect(Minecraft.utility_types).to eq(utility_types)
     end
-    # Deprecate this it block as soon as each of these is implemented
-    # As you implement each of these obviously the test will then you can remove the line
-    # This obviously isn't exhaustive this is just to get you started
-    # it "throws an error if the method does not yet exist" do
-    #   # expect{ Minecraft.stone_types }.to raise_error
-    #   # expect{ Minecraft.plant_types }.to raise_error
-    #   # expect{ Minecraft.glass_types }.to raise_error
-    # end
+    context "variants" do
+      it "throws an error if the method does not yet exist" do
+       expect{ Minecraft.stone_variants }.to raise_error
+       expect{ Minecraft.plant_variants }.to raise_error
+       expect{ Minecraft.glass_variants }.to raise_error
+      end
+    end
   end
 end

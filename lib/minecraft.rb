@@ -4,11 +4,10 @@ require 'block_types'
 
 class Minecraft
   class << self
-    # Maybe you'll have a concern called BlockVariants or something
-    # Alternatively you could just include every single concern here manually
     include BlockTypes
-    
     def method_missing(method_name)
+      # Indent this in one line and start it with .to_s.include?("types") or something
+      # so its easier to get down tot he variants section
       if method_name.to_s.include?("wood_types")
         return WOOD_TYPES
       elsif method_name.to_s.eql?("stone_types")
@@ -41,6 +40,8 @@ class Minecraft
         return UTILITY_TYPES
       elsif method_name.to_s.include?("_types")
         raise NoMethodError, "Types not yet implemented"
+      elsif method_name.to_s.include?("_variants")
+        raise NoMethodError, "Variants not yet implemented"
       else
         super
       end
