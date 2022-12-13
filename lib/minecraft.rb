@@ -10,7 +10,7 @@ class Minecraft
     
     def method_missing(method_name)
       if method_name.to_s.include?("wood_types")
-        return MINECRAFT_WOOD_TYPES
+        return WOOD_TYPES
       elsif method_name.to_s.include?("_types")
         raise NoMethodError, "Types not yet implemented"
       else
