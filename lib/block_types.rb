@@ -1,5 +1,6 @@
 module BlockTypes
-   AQUATIC_TYPES = ["coral", "coral block", "coral fan", "dead coral", "dead coral block", "dead coral fan", "snow", "ice", "kelp", "seagrass", "sponge", "prismarine"].freeze
+  # include variants here maybe?
+  AQUATIC_TYPES = ["coral", "coral block", "coral fan", "dead coral", "dead coral block", "dead coral fan", "snow", "ice", "kelp", "seagrass", "sponge", "prismarine"].freeze
   CONCRETE_TYPES = ["concrete", "concete powder"].freeze
   DIRT_TYPES = ["clay", "coarse dirt", "dirt", "dirt path", "farmland", "grass block", "gravel", "mud", "mycelium", "podzol", "red sand", "rooted dirt", "sand"].freeze
   END_TYPES = ["chorus", "end stone", "purpur"].freeze
