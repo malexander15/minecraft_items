@@ -6,7 +6,7 @@ describe Minecraft do
     # Figure out where it is saved and add it in
     it "returns wood type blocks" do
       wood_types = ["oak", "spruce", "birch", "jungle", "acacia", "dark oak", "mangrove", "crimson", "warped"]
-      expect(Minecraft.block.wood_types).to eq(wood_types)
+      expect(Minecraft.blocks.wood_types).to eq(wood_types)
     end
     it "returns stone type blocks" do
       stone_types = ["Stone", "stone brick", "sandstone", "red sandstone", "Cobblestone", "Stone Brick", "Andesite", "Polished Andesite", "Diorite", "Polished Diorite", "Granite", "Polished Granite",  "Brick", "Deepslate" ,"Mud", "dripstone", "mossy stone"]
