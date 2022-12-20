@@ -4,9 +4,9 @@ describe Minecraft do
   context "materials" do
     # Figure out how to make this pass. Add it in the "method_missing" in Minecraft.rb
     # Figure out where it is saved and add it in
-    it "returns wood types" do
+    it "returns wood type blocks" do
       wood_types = ["oak", "spruce", "birch", "jungle", "acacia", "dark oak", "mangrove", "crimson", "warped"]
-      expect(Minecraft.wood_types).to eq(wood_types)
+      expect(Minecraft.blocks.wood_types).to eq(wood_types)
     end
     it "returns stone type blocks" do
       stone_types = ["Stone", "stone brick", "sandstone", "red sandstone", "Cobblestone", "Stone Brick", "Andesite", "Polished Andesite", "Diorite", "Polished Diorite", "Granite", "Polished Granite",  "Brick", "Deepslate" ,"Mud", "dripstone", "mossy stone"]
