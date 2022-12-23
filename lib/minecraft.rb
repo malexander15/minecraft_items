@@ -1,6 +1,7 @@
 require 'active_support/core_ext/string'
 # Figure out how you want to require everything you needed
 require 'block_types'
+require 'concerns'
 
 class Minecraft
   class << self
@@ -42,8 +43,22 @@ class Minecraft
     end
 
     def method_missing(variant)
-      if variants.to_s.include?("wood_type_variants")
-        return ACACIA_VARIANTS && BIRCH_VARIANTS &&DARK_OAK_VARIANTS && JUNGLE_VARIANTS && SPRUCE_VARIANTS && MANGROVE_VARIANTS && OAK_VARIANTS
+      if variants.to_s.include?("acacia_variants")
+        return ACACIA_VARIANTS
+      elsif variants.to_s.include?("birch_variants")
+        return BIRCH_VARIANTS
+      elsif variants.to_s.include?("dark_oak_variants")
+        return DARK_OAK_VARIANTS
+      elsif variants.to_s.include?("jungle_variants")
+        return JUNGLE_VARIANTS
+      elsif variants.to_s.include?("spruce_variants")
+        return SPRUCE_VARIANTS
+      elsif variants.to_s.include?("mangrove_variants")
+        return MANGROVE_VARIANTS
+      elsif variants.to_s.include?("oak_variants")
+        return OAK_VARIANTS
+
+
       elsif types.to_s.include?("_variants")
         raise NoMethodError, "Variants not yet implemented"
       else

@@ -1,5 +1,6 @@
 require_relative "../lib/minecraft.rb"
 
+
 describe Minecraft do
   context "materials" do
     # Figure out how to make this pass. Add it in the "method_missing" in Minecraft.rb
@@ -65,12 +66,20 @@ describe Minecraft do
       utility_types = ["containers", "shulkers", "workstations", "bed"]
       expect(Minecraft.utility_types).to eq(utility_types)
     end
-    context "variants" do
-      it "throws an error if the method does not yet exist" do
-       expect{ Minecraft.stone_variants }.to raise_error
-       expect{ Minecraft.plant_variants }.to raise_error
-       expect{ Minecraft.glass_variants }.to raise_error
-      end
+  end
+
+  context "variants" do
+    it "returns acacia wood type variants" do
+      acacia_variants = ["Acacia Door",  "Acacia Fence", "Acacia Fence Gate",  "Acacia Log", "Acacia Planks", "Acacia Sign", "Acacia Slab", "Acacia Stairs", "Acacia Trapdoor", "Acacia Wood", "Stripped Acacia Log", "Stripped Acacia Wood"]
+      expect(Minecraft.acacia_variants).to eq(acacia_variants)
+    end
+    it "returns birch wood type variants" do
+      birch_variants = ["Birch Door", "Birch Fence",  "Birch Fence Gate", "Birch Log", "Birch Planks", "Birch Sign",  "Birch Slab", "Birch Stairs", "Birch Trapdoor", "Birch Wood", "Stripped Birch Log", "Stripped Birch Wood"]
+      expect(Minecraft.birch_variants).to eq(birch_variants)
+    end
+    it "returns dark oak wood type variants" do
+      dark_oak_variants = ["Dark Oak Door", "Dark Oak Fence", "Dark Oak Fence Gate",  "Dark Oak Log", "Dark Oak Planks", "Dark Oak Sign", "Dark Oak Slab", "Dark Oak Stairs", "Dark Oak Trapdoor", "Dark Oak Wood", "Stripped Dark Oak Log", "Stripped Dark Oak Wood"]
+      expect(Minecraft.dark_oak_variants).to eq(dark_oak_variants)
     end
   end
 end
