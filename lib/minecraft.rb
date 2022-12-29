@@ -5,7 +5,7 @@ require 'block_types'
 class Minecraft
   class << self
     include BlockTypes
-    def method_missing(type) 
+    def block(type) 
       if type.to_s.include?("wood_types")
         return WOOD_TYPES
       elsif type.to_s.eql?("stone_types")
@@ -36,29 +36,34 @@ class Minecraft
         return GLAZED_TERRACOTTA_TYPES
       elsif type.to_s.include?("utility_types")
         return UTILITY_TYPES
-      elsif type.to_s.include?("_types")
-        raise NoMethodError, "Types not yet implemented"
+      end
+    end
 
-      elsif type.to_s.include?("acacia_variants")
+    def variants(variant_type)
+      if variant_type.to_s.include?("acacia_variants")
         return ACACIA_VARIANTS
-      elsif type.to_s.include?("birch_variants")
+      elsif variant_type.to_s.include?("birch_variants")
         return BIRCH_VARIANTS
-      elsif type.to_s.include?("dark_oak_variants")
+      elsif variant_type.to_s.include?("dark_oak_variants")
         return DARK_OAK_VARIANTS
-      elsif type.to_s.include?("jungle_variants")
+      elsif variant_type.to_s.include?("jungle_variants")
         return JUNGLE_VARIANTS
-      elsif type.to_s.include?("spruce_variants")
+      elsif variant_type.to_s.include?("spruce_variants")
         return SPRUCE_VARIANTS
-      elsif type.to_s.include?("mangrove_variants")
+      elsif variant_type.to_s.include?("mangrove_variants")
         return MANGROVE_VARIANTS
-      elsif type.to_s.include?("oak_variants")
+      elsif variant_type.to_s.include?("oak_variants")
         return OAK_VARIANTS
+      end
+    end
 
         #more variants here. like alot more...
 
-
-      elsif types.to_s.include?("_variants")
+    def method_missing(method_name) 
+      if method_name.to_s.include?("_variants")
         raise NoMethodError, "Variants not yet implemented"
+      elsif method_name.to_s.include?("_types")
+        raise NoMethodError, "Types not yet implemented"
       else
         super
       end
