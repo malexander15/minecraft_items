@@ -37,6 +37,7 @@ class Minecraft
       elsif type.to_s.include?("utility_types")
         return UTILITY_TYPES
       else
+        super
       end
     end
 
@@ -56,6 +57,7 @@ class Minecraft
       elsif variant_type.to_s.include?("oak_variants")
         return OAK_VARIANTS
       else
+        super
       end
     end
 
