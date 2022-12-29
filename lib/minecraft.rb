@@ -6,7 +6,7 @@ require 'concerns'
 class Minecraft
   class << self
     include BlockTypes
-    def block_types(type) 
+    def method_missing(type) 
       if type.to_s.include?("wood_types")
         return WOOD_TYPES
       elsif type.to_s.eql?("stone_types")
