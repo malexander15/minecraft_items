@@ -1,4 +1,5 @@
-require 'concerns'
+Dir[File.join(__dir__, 'concerns', '*.rb')].each { |file| require file }
+
 module BlockTypes
   # include variants here maybe?
   include AquaticTypeVariants
