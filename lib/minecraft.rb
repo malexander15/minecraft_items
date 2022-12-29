@@ -36,8 +36,7 @@ class Minecraft
         return GLAZED_TERRACOTTA_TYPES
       elsif type.to_s.include?("utility_types")
         return UTILITY_TYPES
-      else method_name.to_s.include?("_types")
-        raise NoMethodError, "Types not yet implemented"
+      else
       end
     end
 
@@ -56,8 +55,7 @@ class Minecraft
         return MANGROVE_VARIANTS
       elsif variant_type.to_s.include?("oak_variants")
         return OAK_VARIANTS
-      else method_name.to_s.include?("_variants")
-        raise NoMethodError, "Variants not yet implemented"
+      else
       end
     end
 
@@ -65,9 +63,9 @@ class Minecraft
 
     def method_missing(method_name) 
       if method_name.to_s.include?("_variants")
-        raise NoMethodError, "Variants not yet implemented"
+        block(method_name)
       elsif method_name.to_s.include?("_types")
-        raise NoMethodError, "Types not yet implemented"
+        variants(method_name)
       else
         super
       end
