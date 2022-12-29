@@ -1,3 +1,4 @@
+require 'concerns'
 module BlockTypes
   # include variants here maybe?
   include AquaticTypeVariants

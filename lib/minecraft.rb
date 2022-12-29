@@ -1,7 +1,6 @@
 require 'active_support/core_ext/string'
 # Figure out how you want to require everything you needed
 require 'block_types'
-require 'concerns'
 
 class Minecraft
   class << self
@@ -37,26 +36,25 @@ class Minecraft
         return GLAZED_TERRACOTTA_TYPES
       elsif type.to_s.include?("utility_types")
         return UTILITY_TYPES
-      else type.to_s.include?("_types")
+      elsif type.to_s.include?("_types")
         raise NoMethodError, "Types not yet implemented"
-      end
-    end
 
-    def method_missing(variant)
-      if variants.to_s.include?("acacia_variants")
+      elsif type.to_s.include?("acacia_variants")
         return ACACIA_VARIANTS
-      elsif variants.to_s.include?("birch_variants")
+      elsif type.to_s.include?("birch_variants")
         return BIRCH_VARIANTS
-      elsif variants.to_s.include?("dark_oak_variants")
+      elsif type.to_s.include?("dark_oak_variants")
         return DARK_OAK_VARIANTS
-      elsif variants.to_s.include?("jungle_variants")
+      elsif type.to_s.include?("jungle_variants")
         return JUNGLE_VARIANTS
-      elsif variants.to_s.include?("spruce_variants")
+      elsif type.to_s.include?("spruce_variants")
         return SPRUCE_VARIANTS
-      elsif variants.to_s.include?("mangrove_variants")
+      elsif type.to_s.include?("mangrove_variants")
         return MANGROVE_VARIANTS
-      elsif variants.to_s.include?("oak_variants")
+      elsif type.to_s.include?("oak_variants")
         return OAK_VARIANTS
+
+        #more variants here. like alot more...
 
 
       elsif types.to_s.include?("_variants")
