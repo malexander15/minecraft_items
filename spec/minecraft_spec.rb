@@ -241,5 +241,37 @@ describe Minecraft do
   end
 
   context "Nether type variants" do
-    it "returns "
+    it "returns basalt type variants" do
+      basalt_variants = ["Basalt", "Polished Basalt", "Smooth Basalt"]
+    expect(Minecraft.basalt_variants).to eq(basalt_variants)
+    end
+    it "returns blackstone type variants" do
+      blackstone_variants = ["Blackstone", "Blackstone Slab", "Blackstone Stairs", "Blackstone Wall", "Chiseled Polished Blackstone", "Cracked Polished Blackstone Bricks", "Gilded Blackstone",  "Polished Blackstone", "Polished Blackstone Brick Slab", "Polished Blackstone Brick Stairs", "Polished Blackstone Brick Wall",  "Polished Blackstone Bricks", "Polished Blackstone Slab", "Polished Blackstone Stairs", "Polished Blackstone Wall"]
+    expect(Minecraft.blackstone_variants).to eq(blackstone_variants)
+    end
+    it "returns crimson type variants" do
+      crimson_variants = ["Crimson Button", "Crimson Door", "Crimson Fence", "Crimson Fence Gate", "Crimson Fungus", "Crimson Hyphae", "Crimson Nylium", "Crimson Planks", "Crimson Pressure Plate", "Crimson Roots", "Crimson Sign", "Crimson Slab", "Crimson Stairs", "Crimson Stem", "Crimson Trapdoor", "Stripped Crimson Hyphae", "Stripped Crimson Stem", "Weeping Vines"]
+    expect(Minecraft.crimson_variants).to eq(crimson_variants)
+    end
+    it "returns nether quartz type variants" do
+      nether_quarts_variants = ["Block of Quartz", "Chiseled Quartz Block", "Nether Quartz Ore", "Quartz Pillar", "Quartz Slab", "Quartz Stairs", "Smooth Quartz Block", "Smooth Quartz Slab", "Smooth Quartz Stairs"]
+    expect(Minecraft.nether_quarts_variants).to eq(nether_quarts_variants)
+    end
+    it "returns netherrack brick type variants" do
+      netherrack_brick_variants = ["Nether Brick Fence", "Nether Brick Slab", "Nether Brick Stairs", "Nether Brick Wall", "Nether Bricks", "Netherrack", "Red Nether Brick Slab", "Red Nether Brick Stairs", "Red Nether Brick Wall", "Red Nether Bricks"]
+    expect(Minecraft.netherrack_brick_variants).to eq(netherrack_brick_variants)
+    end
+    it "returns soul magma type variants" do
+      soul_magma_variants = ["Magma Block", "Soul Sand", "Soul Soil"]
+    expect(Minecraft.soul_magma_variants).to eq(soul_magma_variants)
+    end
+    it "returns nether wart type variants" do
+      nether_wart_variants = ["Nether Wart", "Nether Wart Block"]
+    expect(Minecraft.nether_wart_variants).to eq(nether_wart_variants)
+    end
+    it "returns warped type variants" do
+      warped_variants = ["Nether Sprouts", "Stripped Warped Hyphae", "Stripped Warped Stem", "Twisting Vines", "Warped Button", "Warped Door",  "Warped Fence", "Warped Fence Gate", "Warped Fungus", "Warped Hyphae", "Warped Nylium", "Warped Planks", "Warped Pressure Plate", "Warped Roots", "Warped Sign", "Warped Slab", "Warped Stairs",  "Warped Stem", "Warped Trapdoor"].freeze
+    expect(Minecraft.warped_variants).to eq(warped_variants)
+    end
+  end
 end
