@@ -274,4 +274,152 @@ describe Minecraft do
     expect(Minecraft.warped_variants).to eq(warped_variants)
     end
   end
+  context "Plant variants" do
+    it "returns leave type variants" do
+      leave_variants = ["Oak Leaves", "Spruce Leaves", "Birch Leaves",  "Jungle Leaves", "Acacia Leaves", "Dark Oak Leaves", "Azalea Leaves", "Flowering Azalea Leaves", "Mangrove Leaves"]
+    expect(Minecraft.leave_variants).to eq(leave_variants)
+    end
+    it "returns sapling type variants" do
+      sapling_variants = ["Oak Sapling",  "Spruce Sapling", "Birch Sapling", "Jungle Sapling", "Acacia Sapling",  "Dark Oak Sapling", "Azalea", "Flowering Azalea", "Mangrove Propagule"]
+    expect(Minecraft.sapling_variants).to eq(sapling_variants)
+    end
+    it "returns flower type variants" do
+      flower_variants = ["Allium",  "Azure Bluet", "Blue Orchid", "Cornflower", "Dandelion", "Lilac", "Lily of the Valley", "Orange Tulip",
+  "Oxeye Daisy", "Peony", "Pink Tulip", "Poppy", "Red Tulip", "Rose Bush",  "Sunflower", "White Tulip", "Wither Rose"]
+    expect(Minecraft.flower_variants).to eq(flower_variants)
+    end
+    it "returns mushroom type variants" do
+      mushroom_variants = ["Brown Mushroom", "Brown Mushroom Block", "Mushroom Stem", "Red Mushroom", "Red Mushroom Block"]
+    expect(Minecraft.mushroom_variants).to eq(mushroom_variants)
+    end
+    it "returns cave plant type variants" do
+      cave_plant_variants = ["Big Dripleaf", "Glow Lichen", "Hanging Roots", "Moss Block", "Moss Carpet", "Small Dripleaf", "Spore Blossom"]
+    expect(Minecraft.cave_plant_variants).to eq(cave_plant_variants)
+    end
+    it "returns crop type variants" do
+      crop_variants = ["Bamboo",  "Cactus", "Carved Pumpkin", "Hay Bale", "Melon", "Pumpkin", "Sugar Cane"]
+    expect(Minecraft.crop_variants).to eq(crop_variants)
+    end
+    it "returns shrubbery type variants" do
+      shrubbery_variants = ["Dead Bush", "Fern", "Grass", "Large Fern", "Lily Pad", "Tall Grass", "Vines"]
+    expect(Minecraft.shrubbery_variants).to eq(shrubbery_variants)
+    end
+  end
+
+  context "Redstone variants" do
+    it "returns redstone ore type variants" do
+      redstone_ore_variants = ["Deepslate Redstone Ore", "Redstone Ore"]
+    expect(Minecraft.redstone_ore_variants).to eq(redstone_ore_variants)
+    end
+    it "returns redstone wiring type variants" do
+      redstone_wiring_variants = ["Redstone Comparator", "Redstone Dust", "Redstone Repeater"]
+    expect(Minecraft.redstone_wiring_variants).to eq(redstone_wiring_variants)
+    end
+    it "returns power source type variants" do
+      power_source_variants = ["Block of Redstone", "Daylight Detector", "Lever", "Observer", "Redstone Torch", "Sculk Sensor", "Target", "Tripwire Hook"]
+    expect(Minecraft.power_source_variants).to eq(power_source_variants)
+    end
+    it "returns button type variants" do
+      button_variants = ["Acacia Button", "Birch Button", "Dark Oak Button", "Jungle Button", "Mangrove Button", "Oak Button", "Polished Blackstone Button", "Spruce Button", "Stone Button"]
+    expect(Minecraft.button_variants).to eq(button_variants)
+    end
+    it "returns pressure plate type variants" do
+      pressure_plate_variants = ["Acacia Pressure Plate", "Birch Pressure Plate", "Dark Oak Pressure Plate", "Heavy Weighted Pressure Plate", "Jungle Pressure Plate",  "Light Weighted Pressure Plate", "Mangrove Pressure Plate", "Oak Pressure Plate", "Polished Blackstone Pressure Plate", "Spruce Pressure Plate", "Stone Pressure Plate"]
+    expect(Minecraft.pressure_plate_variants).to eq(pressure_plate_variants)
+    end
+    it "returns redstone container type variants" do
+      redstone_container_variants = ["Dispenser", "Dropper", "Hopper", "Trapped Chest"]
+    expect(Minecraft.redstone_container_variants).to eq(redstone_container_variants)
+    end
+    it "returns piston type variants" do
+      piston_variants = ["Piston", "Sticky Piston"]
+    expect(Minecraft.piston_variants).to eq(piston_variants)
+    end
+    it "returns sticky block type variants" do
+      sticky_block_variants = ["Honey Block", "Slime Block"]
+    expect(Minecraft.sticky_block_variants).to eq(sticky_block_variants)
+    end
+    it "returns rail type variants" do
+      rail_variants = ["Activator Rails", "Detector Rails", "Powered Rails", "Rail"]
+    expect(Minecraft.rail_variants).to eq(rail_variants)
+    end
+    it "returns iron door type variants" do
+      iron_door_variants = ["Iron Trapdoor", "Iron Door"]
+    expect(Minecraft.iron_door_variants).to eq(iron_door_variants)
+    end
+    it "returns other redstone type variants" do
+      other_redstone_variants = ["Jukebox", "Noteblock", "TNT"]
+    expect(Minecraft.other_redstone_variants).to eq(other_redstone_variants)
+    end
+  end
+
+  context "Stone variants" do
+    it "returns stone variants" do
+      stone_variants = ["Stone", "Smooth Stone Slab", "Smooth Stone", "Stone Stairs", "Stone Slab"]
+    expect(Minecraft.stone_variants).to eq(stone_variants)
+    end
+    it "returns Cobblestone variants" do
+      cobblestone_variants = ["Cobblestone", "Cobblestone Slab", "Cobblestone Stairs", "Cobblestone Wall"]
+    expect(Minecraft.cobblestone_variants).to eq(cobblestone_variants)
+    end
+    it "returns Andesite variants" do
+      andesite_variants = ["Andesite", "Polished Andesite", "Andesite Stair", "Andesite Slab", "Polished Andesite Slab", "Andesite Wall"]
+    expect(Minecraft.andesite_variants).to eq(andesite_variants)
+    end
+    it "returns Diorite variants" do
+      diorite_variants = ["Diorite", "Polished Diorite", "Polished Diorite Stair", "Polished Diorite Slab", "Diorite Slab", "Diorite Wall"]
+    expect(Minecraft.diorite_variants).to eq(diorite_variants)
+    end
+    it "returns Granite variants" do
+      granite_variants = ["Granite", "Polished Granite", "Polished Granite Stair", "Granite Stair", "Polished Granite Slab", "Granite Slab", "Granite Wall"]
+    expect(Minecraft.granite_variants).to eq(granite_variants)
+    end
+    it "returns sandstone variants" do
+      sandstone_variants = ["Sandstone", "Chiseled Sandstone",  "Smooth Sandstone", "Sandstone Slab", "Sandstone Stairs", "Red Sandstone", "Chiseled Red Sandstone",  "Smooth Red Sandstone", "Red Sandstone Stairs", "Red Sandstone Slab", "Smooth Red Sandstone Stairs",  "Smooth Sandstone Stairs", "Smooth Red Sandstone Slab", "Smooth Sandstone Slab",  "Red Sandstone Wall", "Sandstone Wall", "Cut Sandstone Slab", "Cut Red Sandstone Slab", "Cut Sandstone",  "Cut Red Sandstone"]
+    expect(Minecraft.sandstone_variants).to eq(sandstone_variants)
+    end
+    it "returns Deepslate variants" do
+      deepslate_variants = ["Cobbled Deepslate Wall", "Polished Deepslate Wall",  "Deepslate Brick Wall", "Deepslate Tile Wall", "Cobbled Deepslate Stairs",  "Deepslate Tile Stairs",  "Polished Deepslate Stairs",  "Deepslate Brick Stairs", "Infested Deepslate", "Cobbled Deepslate Slab", "Polished Deepslate Slab",  "Deepslate Tile Slab", "Deepslate Brick Slab", "Deepslate Tiles", "Cracked Deepslate Tiles",  "Deepslate Bricks", "Cracked Deepslate Bricks", "Chiseled Deepslate", "Cobbled Deepslate",  "Polished Deepslate"]
+    expect(Minecraft.deepslate_variants).to eq(deepslate_variants)
+    end
+    it "returns stone brick variants" do
+      stone_brick_variants = ["Stone Brick Slab", " Stone Brick", "Cracked Stone Brick", "Chiseled Stone Brick", "Stone Brick Stair", "Stone Brick Wall"]
+    expect(Minecraft.stone_brick_variants).to eq(stone_brick_variants)
+    end
+    it "returns mossy Cobblestone variants" do
+      mossy_cobblestone_variants = ["Mossy Cobblestone", "Mossy Cobblestone Wall", "Mossy Cobblestone Stair", "Mossy Cobblestone Slab"]
+    expect(Minecraft.mossy_cobblestone_variants).to eq(mossy_cobblestone_variants)
+    end
+    it "returns mossy stone brick variants" do
+      mossy_stone_brick_variants = ["Mossy Stone Brick", "Mossy Stone Brick Stair", "Mossy Stone Brick Slab", "Mossy Stone Brick Wall"]
+    expect(Minecraft.mossy_stone_brick_variants).to eq(mossy_stone_brick_variants)
+    end
+    it "returns brick variants" do
+      brick_variants = ["Brick Slab", "Brick", "Brick Stair", "Brick Wall"]
+    expect(Minecraft.brick_variants).to eq(brick_variants)
+    end
+    it "returns mud brick variants" do
+      mud_brick_variants = ["Mud Brick Slab", "Packed Mud", "Mud Brick", "Mud Brick Stair", "Mud Brick Wall"]
+    expect(Minecraft.mud_brick_variants).to eq(mud_brick_variants)
+    end
+    it "returns dripstone variants" do
+      dripstone_variants = ["Pointed Dripstone", "Dripstone Block"]
+    expect(Minecraft.dripstone_variants).to eq(dripstone_variants)
+    end
+  end
+
+  context "Utility variants" do
+    it "returns container type variants" do
+      container_variants = ["Chest", "Ender Chest"]
+    expect(Minecraft.container_variants).to eq(container_variants)
+    end
+    it "returns crafting block type variants" do
+      crafting_block_variants = ["Anvil", "Crafting Table", "Enchanting Table", "Furnace"]
+    expect(Minecraft.crafting_block_variants).to eq(crafting_block_variants)
+    end
+    it "returns workstation type variants" do
+      workstation_variants = ["Barrel", "Bell", "Blast Furnace", "Brewing Stand", "Cartography Table", "Cauldron", "Composter", "Fletching Table", "Grindstone", "Lectern", "Loom", "Smithing Table", "Smoker", "Stonecutter"]
+    expect(Minecraft.workstation_variants).to eq(workstation_variants)
+    end
+  end
 end
