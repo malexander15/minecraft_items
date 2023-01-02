@@ -65,9 +65,9 @@ class Minecraft
 
     def method_missing(method_name) 
       if method_name.to_s.include?("_variants")
-        block(method_name)
-      elsif method_name.to_s.include?("_types")
         variants(method_name)
+      elsif method_name.to_s.include?("_types")
+        block(method_name)
       else
         super
       end
