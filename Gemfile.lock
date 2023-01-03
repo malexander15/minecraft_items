@@ -27,6 +27,7 @@ GEM
     rspec-support (3.11.0)
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
+    yaml (0.1.1)
 
 PLATFORMS
   x86_64-linux
@@ -35,6 +36,7 @@ DEPENDENCIES
   activesupport
   rake
   rspec
+  yaml
 
 BUNDLED WITH
    2.3.4

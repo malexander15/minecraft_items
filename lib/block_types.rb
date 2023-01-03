@@ -1,6 +1,8 @@
 Dir[File.join(__dir__, 'concerns', '*.rb')].each { |file| require file }
 
 module BlockTypes
+  # Eventually all variants will be in the yml file and this will be the only module needed
+  include MinecraftVariants
   # include variants here maybe?
   include AquaticTypeVariants
   include ConcreteTypeVariants
