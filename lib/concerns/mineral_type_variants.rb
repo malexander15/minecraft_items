@@ -1,6 +1,5 @@
 module MineralTypeVariants
-	IRON_VARIANTS = ["Block of Iron", "Block of Raw Iron", "Chain", "Deepslate Iron Ore",
-		"Iron Bars", "Iron Ore"].freeze
+	IRON_VARIANTS = ["Block of Iron", "Block of Raw Iron", "Chain", "Deepslate Iron Ore", "Iron Bars", "Iron Ore"].freeze
 	GOLD_VARIANTS = ["Block of Gold", "Block of Raw Gold", "Deepslate Gold Ore", "Gold Ore"].freeze
 	DIAMOND_VARIANTS = ["Deepslate Diamond Ore", "Diamond Block", "Diamond Ore"].freeze
 	EMERALD_VARIANTS = ["Amethyst Cluster", "Block of Amethyst", "Budding Amethyst", "Large Amethyst Bud", "Medium Amethyst Bud", "Small Amethyst Bud"].freeze

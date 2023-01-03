@@ -6,6 +6,5 @@ module NetherTypeVariants
 	NETHERRACK_BRICK_VARIANTS = ["Nether Brick Fence", "Nether Brick Slab",	"Nether Brick Stairs", "Nether Brick Wall", "Nether Bricks", "Netherrack", "Red Nether Brick Slab",	"Red Nether Brick Stairs", "Red Nether Brick Wall",	"Red Nether Bricks"].freeze
 	SOUL_MAGMA_VARIANTS = ["Magma Block", "Soul Sand", "Soul Soil"].freeze
 	NETHER_WART_VARIANTS = ["Nether Wart", "Nether Wart Block"].freeze
-	WARPED_VARIANTS = ["Nether Sprouts", "Stripped Warped Hyphae", "Stripped Warped Stem", "Twisting Vines",
-"Warped Button", "Warped Door",	"Warped Fence",	"Warped Fence Gate", "Warped Fungus",	"Warped Hyphae", "Warped Nylium", "Warped Planks", "Warped Pressure Plate",	"Warped Roots",	"Warped Sign", "Warped Slab", "Warped Stairs",	"Warped Stem", "Warped Trapdoor"].freeze
+	WARPED_VARIANTS = ["Nether Sprouts", "Stripped Warped Hyphae", "Stripped Warped Stem", "Twisting Vines", "Warped Button", "Warped Door",	"Warped Fence",	"Warped Fence Gate", "Warped Fungus",	"Warped Hyphae", "Warped Nylium", "Warped Planks", "Warped Pressure Plate",	"Warped Roots",	"Warped Sign", "Warped Slab", "Warped Stairs",	"Warped Stem", "Warped Trapdoor"].freeze
 end

@@ -1,5 +1,19 @@
+Dir[File.join(__dir__, 'concerns', '*.rb')].each { |file| require file }
+
 module BlockTypes
   # include variants here maybe?
+  include AquaticTypeVariants
+  include ConcreteTypeVariants
+  include EndTypeVariants
+  include GlassTypeVariants
+  include LightTypeVariants
+  include MineralTypeVariants
+  include NetherTypeVariants
+  include PlantTypeVariants
+  include RedstoneTypeVariants
+  include StoneTypeVariants
+  include UtilityTypeVariants
+  include WoodTypeVariants
   AQUATIC_TYPES = ["coral", "coral block", "coral fan", "dead coral", "dead coral block", "dead coral fan", "snow", "ice", "kelp", "seagrass", "sponge", "prismarine"].freeze
   CONCRETE_TYPES = ["concrete", "concete powder"].freeze
   DIRT_TYPES = ["clay", "coarse dirt", "dirt", "dirt path", "farmland", "grass block", "gravel", "mud", "mycelium", "podzol", "red sand", "rooted dirt", "sand"].freeze
