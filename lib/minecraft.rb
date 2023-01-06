@@ -1,4 +1,4 @@
-require 'active_support/core_ext/string'
+require 'active_support/core_ext/hash/indifferent_access'
 # Figure out how you want to require everything you needed
 require 'block_types'
 
@@ -41,31 +41,29 @@ class Minecraft
       end
     end
 
-    def variants(variant_type)
-      if variant_type.to_s.include?("acacia_variants")
-        return ACACIA_VARIANTS
-      elsif variant_type.to_s.include?("birch_variants")
-        return BIRCH_VARIANTS
-      elsif variant_type.to_s.include?("dark_oak_variants")
-        return DARK_OAK_VARIANTS
-      elsif variant_type.to_s.include?("jungle_variants")
-        return JUNGLE_VARIANTS
-      elsif variant_type.to_s.include?("spruce_variants")
-        return SPRUCE_VARIANTS
-      elsif variant_type.to_s.include?("mangrove_variants")
-        return MANGROVE_VARIANTS
-      elsif variant_type.to_s.include?("oak_variants")
-        return OAK_VARIANTS
-      else
-        super
-      end
-    end
-
-        #more variants here. like alot more...
+    # def variants(variant_type)
+    #  if variant_type.to_s.include?("acacia_variants")
+    #    return ACACIA_VARIANTS
+    #  elsif variant_type.to_s.include?("birch_variants")
+    #    return BIRCH_VARIANTS
+    #  elsif variant_type.to_s.include?("dark_oak_variants")
+    #    return DARK_OAK_VARIANTS
+    #  elsif variant_type.to_s.include?("jungle_variants")
+    #    return JUNGLE_VARIANTS
+    #  elsif variant_type.to_s.include?("spruce_variants")
+    #    return SPRUCE_VARIANTS
+    #  elsif variant_type.to_s.include?("mangrove_variants")
+    #    return MANGROVE_VARIANTS
+    #  elsif variant_type.to_s.include?("oak_variants")
+    #    return OAK_VARIANTS
+    #  else
+    #    super
+    #  end
+    # end
 
     def method_missing(method_name) 
       if method_name.to_s.include?("_variants")
-        variants(method_name)
+        minecraft_variants[method_name]
       elsif method_name.to_s.include?("_types")
         block(method_name)
       else

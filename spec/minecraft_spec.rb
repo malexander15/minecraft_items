@@ -99,7 +99,7 @@ describe Minecraft do
     end
   end
 
-  context "Aqutic variants" doors
+  context "Aqutic variants" do
     it "returns coral type variants" do
       coral_variants =  ["Brain Coral", "Bubble Coral", "Fire Coral", "Horn Coral", "Tube Coral"]
     expect(Minecraft.coral_variants).to eq(coral_variants)
