@@ -1,4 +1,4 @@
-require 'active_support/core_ext/string'
+require 'active_support/core_ext/hash/indifferent_access'
 # Figure out how you want to require everything you needed
 require 'block_types'
 
