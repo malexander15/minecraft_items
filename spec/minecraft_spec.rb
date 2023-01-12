@@ -105,39 +105,39 @@ describe Minecraft do
     expect(Minecraft.coral_variants).to eq(coral_variants)
     end
     it "returns coral block type variants" do
-      coral_block_variants =  ["Brain Coral", "Bubble Coral", "Fire Coral", "Horn Coral", "Tube Coral"]
+      coral_block_variants =  ["Brain Coral Block", "Bubble Coral Block", "Fire Coral Block", "Horn Coral Block", "Tube Coral Block"]
     expect(Minecraft.coral_block_variants).to eq(coral_block_variants)
     end
     it "returns coral fan type variants" do
-      coral_fan_variants =  ["Brain Coral", "Bubble Coral", "Fire Coral", "Horn Coral", "Tube Coral"]
+      coral_fan_variants =  ["Brain Coral fan", "Bubble Coral fan", "Fire Coral fan", "Horn Coral fan", "Tube Coral fan"]
     expect(Minecraft.coral_fan_variants).to eq(coral_fan_variants)
     end
     it "returns dead coral type variants" do
-      dead_coral_variants =  ["Brain Coral", "Bubble Coral", "Fire Coral", "Horn Coral", "Tube Coral"]
+      dead_coral_variants =  ["Dead Brain Coral", "Dead Bubble Coral", "Dead Fire Coral", "Dead Horn Coral", "Dead Tube Coral"]
     expect(Minecraft.dead_coral_variants).to eq(dead_coral_variants)
     end
     it "returns dead coral block type variants" do
-      dead_coral_block_variants =  ["Brain Coral", "Bubble Coral", "Fire Coral", "Horn Coral", "Tube Coral"]
+      dead_coral_block_variants =  ["Dead Brain Coral Block", "Dead Bubble Coral Block", "Dead Fire Coral Block", "Dead Horn Coral Block", "Dead Tube Coral Block"]
     expect(Minecraft.dead_coral_block_variants).to eq(dead_coral_block_variants)
     end
     it "returns dead coral fan type variants" do
-      dead_coral_fan_variants =  ["Brain Coral", "Bubble Coral", "Fire Coral", "Horn Coral", "Tube Coral"]
+      dead_coral_fan_variants =  ["Dead Brain Coral Fan", "Dead Bubble Coral Fan", "Dead Fire Coral Fan", "Dead Horn Coral Fan"]
     expect(Minecraft.dead_coral_fan_variants).to eq(dead_coral_fan_variants)
     end
     it "returns snow and ice type variants" do
-      snow_and_ice_variants =  ["Brain Coral", "Bubble Coral", "Fire Coral", "Horn Coral", "Tube Coral"]
+      snow_and_ice_variants =  ["Blue Ice", "Ice", "Packed Ice", "Snow", "Snow Block"]
     expect(Minecraft.snow_and_ice_variants).to eq(snow_and_ice_variants)
     end
     it "returns kelp seagrass type variants" do
-      kelp_seagrass_variants =  ["Brain Coral", "Bubble Coral", "Fire Coral", "Horn Coral", "Tube Coral"]
+      kelp_seagrass_variants =  ["Dried Kelp Block", "Kelp", "Seagrass"]
     expect(Minecraft.kelp_seagrass_variants).to eq(kelp_seagrass_variants)
     end
     it "returns sponge type variants" do
-      sponge_variants =  ["Brain Coral", "Bubble Coral", "Fire Coral", "Horn Coral", "Tube Coral"]
+      sponge_variants =  ["Sponge", "Wet Sponge"]
     expect(Minecraft.sponge_variants).to eq(sponge_variants)
     end
     it "returns prismarine type variants" do
-      prismarine_variants =  ["Brain Coral", "Bubble Coral", "Fire Coral", "Horn Coral", "Tube Coral"]
+      prismarine_variants =  ["Dark Prismarine", "Dark Prismarine Slab", "Dark Prismarine Stairs",  "Prismarine", "Prismarine Brick Slab",  "Prismarine Brick Stairs",  "Prismarine Bricks",  "Prismarine Slab", "Prismarine Stairs", "Prismarine Wall"]
     expect(Minecraft.prismarine_variants).to eq(prismarine_variants)
     end
   end
@@ -169,12 +169,12 @@ describe Minecraft do
   end
   context "Glass variants" do
     it "returns glass block variants" do
-      glass_block_variant = ["Glass", "Black Stained Glass", "Blue Stained Glass", "Brown Stained Glass", "Cyan Stained Glass", "Gray Stained Glass", "Green Stained Glass", "Light Blue Stained Glass", "Light Gray Stained Glass", "Lime Stained Glass", "Magenta Stained Glass", "Orange Stained Glass", "Pink Stained Glass", "Purple Stained Glass", "Red Stained Glass", "White Stained Glass", "Yellow Stained Glass" ]
-    expect(Minecraft.glass_block_variant).to eq(glass_block_variant)
+      glass_block_variants = ["Glass", "Black Stained Glass", "Blue Stained Glass", "Brown Stained Glass", "Cyan Stained Glass", "Gray Stained Glass", "Green Stained Glass", "Light Blue Stained Glass", "Light Gray Stained Glass", "Lime Stained Glass", "Magenta Stained Glass", "Orange Stained Glass", "Pink Stained Glass", "Purple Stained Glass", "Red Stained Glass", "White Stained Glass", "Yellow Stained Glass" ]
+    expect(Minecraft.glass_block_variants).to eq(glass_block_variants)
     end
     it "returns glass pane variants" do
-      glass_pane_variant =["Glass Pane", "Black Stained Glass Pane", "Blue Stained Glass Pane", "Brown Stained Glass Pane", "Cyan Stained Glass Pane", "Gray Stained Glass Pane", "Green Stained Glass Pane", "Light Blue Stained Glass Pane", "Light Gray Stained Glass Pane", "Lime Stained Glass Pane", "Magenta Stained Glass Pane",  "Orange Stained Glass Pane", "Pink Stained Glass Pane", "Purple Stained Glass Pane", "Red Stained Glass Pane", "White Stained Glass Pane", "Yellow Stained Glass Pane"]
-    expect(Minecraft.glass_pane_variant).to eq(glass_pane_variant)
+      glass_pane_variants = ["Glass Pane", "Black Stained Glass Pane", "Blue Stained Glass Pane", "Brown Stained Glass Pane", "Cyan Stained Glass Pane", "Gray Stained Glass Pane", "Green Stained Glass Pane", "Light Blue Stained Glass Pane", "Light Gray Stained Glass Pane", "Lime Stained Glass Pane", "Magenta Stained Glass Pane",  "Orange Stained Glass Pane", "Pink Stained Glass Pane", "Purple Stained Glass Pane", "Red Stained Glass Pane", "White Stained Glass Pane", "Yellow Stained Glass Pane"]
+    expect(Minecraft.glass_pane_variants).to eq(glass_pane_variants)
     end
   end
 
@@ -222,8 +222,12 @@ describe Minecraft do
       diamond_variants = ["Deepslate Diamond Ore", "Diamond Block", "Diamond Ore"]
     expect(Minecraft.diamond_variants).to eq(diamond_variants)
     end
+    it "returns amethyst type variants" do
+      amethyst_variants = ["Amethyst Cluster", "Block of Amethyst", "Budding Amethyst", "Large Amethyst Bud", "Medium Amethyst Bud", "Small Amethyst Bud"]
+    expect(Minecraft.amethyst_variants).to eq(amethyst_variants)
+    end
     it "returns emerald variants" do
-      emerald_variants = ["Amethyst Cluster", "Block of Amethyst", "Budding Amethyst", "Large Amethyst Bud", "Medium Amethyst Bud", "Small Amethyst Bud"]
+      emerald_variants = ["Deepslape Emerald ore", "Emerald Block", "Emerald Ore"]
     expect(Minecraft.emerald_variants).to eq(emerald_variants)
     end
     it "returns obsidian variants" do
@@ -235,7 +239,7 @@ describe Minecraft do
     expect(Minecraft.coal_variants).to eq(coal_variants)
     end
     it "returns copper variants" do
-      copper_variants = ["Block of Copper", "Block of Raw Copper", "Copper Ore", "Cut Copper", "Cut Copper Slab", "Cut Copper Stairs", "Deepslate Copper Ore", "Exposed Copper", "Exposed Cut Copper", "Exposed Cut Copper Slab", "Exposed Cut Copper Stairs", "Oxidized Copper", "Oxidized Cut Copper", "Oxidized Cut Copper Slab", "Oxidized Cut Copper Stairs", "Waxed Block of Copper", "Waxed Cut Copper", "Waxed Cut Copper Slab", "Waxed Cut Copper Stairs", "Waxed Exposed Copper", "Waxed Exposed Cut Copper", "Waxed Exposed Cut Copper Slab", "Waxed Exposed Cut Copper Stairs", "Waxed Oxidized Copper", "Waxed Oxidized Cut Copper", "Waxed Oxidized Cut Copper Slab", "Waxed Oxidized Cut Copper Stairs", "Waxed Weathered Copper", "Waxed Weathered Cut Copper", "Waxed Weathered Cut Copper Slab" "Waxed Weathered Cut Copper Stairs", "Weathered Copper", "Weathered Cut Copper", "Weathered Cut Copper Slab", "Weathered Cut Copper Stairs"]
+      copper_variants = ["Block of Copper", "Block of Raw Copper", "Copper Ore", "Cut Copper", "Cut Copper Slab", "Cut Copper Stairs", "Deepslate Copper Ore", "Exposed Copper", "Exposed Cut Copper", "Exposed Cut Copper Slab", "Exposed Cut Copper Stairs", "Oxidized Copper", "Oxidized Cut Copper", "Oxidized Cut Copper Slab", "Oxidized Cut Copper Stairs", "Waxed Block of Copper", "Waxed Cut Copper", "Waxed Cut Copper Slab", "Waxed Cut Copper Stairs", "Waxed Exposed Copper", "Waxed Exposed Cut Copper", "Waxed Exposed Cut Copper Slab", "Waxed Exposed Cut Copper Stairs", "Waxed Oxidized Copper", "Waxed Oxidized Cut Copper", "Waxed Oxidized Cut Copper Slab", "Waxed Oxidized Cut Copper Stairs", "Waxed Weathered Copper", "Waxed Weathered Cut Copper", "Waxed Weathered Cut Copper Slab", "Waxed Weathered Cut Copper Stairs", "Weathered Copper", "Weathered Cut Copper", "Weathered Cut Copper Slab", "Weathered Cut Copper Stairs"]
     expect(Minecraft.copper_variants).to eq(copper_variants)
     end
   end
@@ -254,8 +258,8 @@ describe Minecraft do
     expect(Minecraft.crimson_variants).to eq(crimson_variants)
     end
     it "returns nether quartz type variants" do
-      nether_quarts_variants = ["Block of Quartz", "Chiseled Quartz Block", "Nether Quartz Ore", "Quartz Pillar", "Quartz Slab", "Quartz Stairs", "Smooth Quartz Block", "Smooth Quartz Slab", "Smooth Quartz Stairs"]
-    expect(Minecraft.nether_quarts_variants).to eq(nether_quarts_variants)
+      nether_quartz_variants = ["Block of Quartz", "Chiseled Quartz Block", "Nether Quartz Ore", "Quartz Pillar", "Quartz Slab", "Quartz Stairs", "Smooth Quartz Block", "Smooth Quartz Slab", "Smooth Quartz Stairs"]
+    expect(Minecraft.nether_quartz_variants).to eq(nether_quartz_variants)
     end
     it "returns netherrack brick type variants" do
       netherrack_brick_variants = ["Nether Brick Fence", "Nether Brick Slab", "Nether Brick Stairs", "Nether Brick Wall", "Nether Bricks", "Netherrack", "Red Nether Brick Slab", "Red Nether Brick Stairs", "Red Nether Brick Wall", "Red Nether Bricks"]
