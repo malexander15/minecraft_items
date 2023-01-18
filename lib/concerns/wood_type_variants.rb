@@ -1,9 +1,0 @@
-module WoodTypeVariants
-	ACACIA_VARIANTS = ["Acacia Door",	"Acacia Fence",	"Acacia Fence Gate",	"Acacia Log", "Acacia Planks", "Acacia Sign",	"Acacia Slab", "Acacia Stairs", "Acacia Trapdoor", "Acacia Wood",	"Stripped Acacia Log", "Stripped Acacia Wood"].freeze
-	BIRCH_VARIANTS = ["Birch Door",	"Birch Fence",	"Birch Fence Gate",	"Birch Log", "Birch Planks", "Birch Sign",	"Birch Slab", "Birch Stairs", "Birch Trapdoor", "Birch Wood",	"Stripped Birch Log", "Stripped Birch Wood"].freeze
-	DARK_OAK_VARIANTS = ["Dark Oak Door",	"Dark Oak Fence",	"Dark Oak Fence Gate",	"Dark Oak Log", "Dark Oak Planks", "Dark Oak Sign",	"Dark Oak Slab", "Dark Oak Stairs", "Dark Oak Trapdoor", "Dark Oak Wood",	"Stripped Dark Oak Log", "Stripped Dark Oak Wood"].freeze
-	JUNGLE_VARIANTS = ["Jungle Door",	"Jungle Fence",	"Jungle Fence Gate",	"Jungle Log", "Jungle Planks", "Jungle Sign",	"Jungle Slab", "Jungle Stairs", "Jungle Trapdoor", "Jungle Wood",	"Stripped Jungle Log", "Stripped Jungle Wood"].freeze
-	SPRUCE_VARIANTS = ["Spruce Door",	"Spruce Fence",	"Spruce Fence Gate",	"Spruce Log", "Spruce Planks", "Spruce Sign",	"Spruce Slab", "Spruce Stairs", "Spruce Trapdoor", "Spruce Wood",	"Stripped Spruce Log", "Stripped Spruce Wood"].freeze
-	MANGROVE_VARIANTS = ["Mangrove Door",	"Mangrove Fence",	"Mangrove Fence Gate",	"Mangrove Log", "Mangrove Planks", "Mangrove Roots", "Mangrove Sign",	"Mangrove Slab", "Mangrove Stairs",	"Mangrove Trapdoor", "Mangrove Wood",	"Muddy Mangrove Roots", "Stripped Mangrove Log", "Stripped Mangrove Wood"].freeze
-	OAK_VARIANTS = ["Oak Door",	"Oak Fence", "Oak Fence Gate",	"Oak Log", "Oak Planks", "Oak Sign", "Oak Slab",	"Oak Stairs", "Oak Trapdoor",	"Oak Wood",	"Petrified Oak Slab",	"Stripped Oak Log", "Stripped Oak Wood"].freeze
-end
