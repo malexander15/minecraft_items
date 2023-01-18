@@ -44,7 +44,7 @@ class Minecraft #make a Minecraft parent class
     def method_missing(method_name) 
       if method_name.to_s.include?("_variants")
         minecraft_variants[method_name]
-      elsif method_name.to_s.eql?("_types")
+      elsif method_name.to_s.include?("_types")
         minecraft_types[method_name]
       else
         super
