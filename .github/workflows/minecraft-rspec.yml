@@ -37,25 +37,8 @@ jobs:
     - name: Print ruby version
       run: ${{ steps.ruby.outputs.ruby-path }} --version
 
-    - name: Install PostgreSQL 10
-      run: |
-        sudo apt-get -yqq install libpq-dev
-
-    - name: Setup Database
-      env:
-        PGHOST: localhost
-        PGUSER: postgres
-        RAILS_ENV: test
-      run: |
-        gem install bundler -v 1.17.3
-        bundle install --jobs 4 --retry 3
-        bin/rails db:create db:schema:load
 
     - name: Build and test with rspec
-      env:
-        PGHOST: localhost
-        PGUSER: postgres
-        RAILS_ENV: test
       run: |
         gem install bundler -v 1.17.3
         bundle install --jobs 4 --retry 3
