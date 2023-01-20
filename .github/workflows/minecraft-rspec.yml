@@ -1,36 +1,62 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-# This workflow will download a prebuilt Ruby version, install dependencies and run tests with Rake
-# For more information see: https://github.com/marketplace/actions/setup-ruby-jruby-and-truffleruby
-
-name: Ruby
+#some stuff because github doesn't like empty folders/files?
+name: Run Rspec Tests
 
 on:
   pull_request:
-    branches: [ $default-branch ]
-
-permissions:
-  contents: read
+    branches:
+    - main
 
 jobs:
-  test:
+  build:
 
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        ruby-version: ['2.6', '2.7', '3.0']
+    runs-on: ubuntu-20.04
+
+    services:
+      postgres:
+        image: postgres:10.11
+        ports: ["5432:5432"]
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Ruby
-    # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
-    # change this to (see https://github.com/ruby/setup-ruby#versioning):
-    # uses: ruby/setup-ruby@v1
-      uses: ruby/setup-ruby@ee2113536afb7f793eed4ce60e8d3b26db912da4 # v1.127.0
+    - uses: actions/checkout@v1
+
+    - name: Cache Ruby
+      uses: actions/cache@preview
+      id: cache
       with:
-        ruby-version: ${{ matrix.ruby-version }}
-        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-    - name: Run tests
-      run: bundle exec rspec spec
+        path: ~/local/rubies
+        key: ruby-2.7.0
+
+    - name: Set up Ruby 2.7.0
+      uses: clupprich/ruby-build-action@master
+      id: ruby
+      with:
+        ruby-version: 2.7.0
+        cache-available: ${{ steps.cache.outputs.cache-hit == 'true' }}
+
+    - name: Print ruby version
+      run: ${{ steps.ruby.outputs.ruby-path }} --version
+
+    - name: Install PostgreSQL 10
+      run: |
+        sudo apt-get -yqq install libpq-dev
+
+    - name: Setup Database
+      env:
+        PGHOST: localhost
+        PGUSER: postgres
+        RAILS_ENV: test
+      run: |
+        gem install bundler -v 1.17.3
+        bundle install --jobs 4 --retry 3
+        bin/rails db:create db:schema:load
+
+    - name: Build and test with rspec
+      env:
+        PGHOST: localhost
+        PGUSER: postgres
+        RAILS_ENV: test
+      run: |
+        gem install bundler -v 1.17.3
+        bundle install --jobs 4 --retry 3
+        bundle exec rspec spec
