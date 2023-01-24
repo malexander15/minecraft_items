@@ -1,15 +1,14 @@
 #some stuff because github doesn't like empty folders/files?
 name: Run Rspec Tests
 
-on:
-  pull_request:
-    branches:
-    - main
+on: [push]
 
 jobs:
-  build:
+  rspec:
+   runs-on: ubuntu-20.04
+    container:
+      image: ruby:2.7.0
 
-    runs-on: ubuntu-20.04
 
     services:
       postgres:
