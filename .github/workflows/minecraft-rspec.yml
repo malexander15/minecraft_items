@@ -1,44 +1,32 @@
 #some stuff because github doesn't like empty folders/files?
-name: Run Rspec Tests
+name: Run rspec workflow
 
-on: [push]
+on:
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
+
+permissions:
+  contents: read
 
 jobs:
-  rspec:
-   runs-on: ubuntu-20.04
-    container:
-      image: ruby:2.7.0
+  test:
 
-
-    services:
-      postgres:
-        image: postgres:10.11
-        ports: ["5432:5432"]
-        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby-version: ['2.6', '2.7', '3.0']
 
     steps:
-    - uses: actions/checkout@v1
-
-    - name: Cache Ruby
-      uses: actions/cache@preview
-      id: cache
+    - uses: actions/checkout@v3
+    - name: Set up Ruby
+    # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
+    # change this to (see https://github.com/ruby/setup-ruby#versioning):
+    # uses: ruby/setup-ruby@v1
+      uses: ruby/setup-ruby@ee2113536afb7f793eed4ce60e8d3b26db912da4 # v1.127.0
       with:
-        path: ~/local/rubies
-        key: ruby-2.7.0
-
-    - name: Set up Ruby 2.7.0
-      uses: clupprich/ruby-build-action@master
-      id: ruby
-      with:
-        ruby-version: 2.7.0
-        cache-available: ${{ steps.cache.outputs.cache-hit == 'true' }}
-
-    - name: Print ruby version
-      run: ${{ steps.ruby.outputs.ruby-path }} --version
-
-
-    - name: Build and test with rspec
-      run: |
-        gem install bundler -v 1.17.3
-        bundle install --jobs 4 --retry 3
-        bundle exec rspec spec
+        ruby-version: ${{ matrix.ruby-version }}
+        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+    - name: Run tests
+      run: bundle exec rspec spec*/
