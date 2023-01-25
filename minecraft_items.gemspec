@@ -7,4 +7,5 @@ Gem::Specification.new do |s|
   s.authors     = ["Maximilian Alexander", "Zane Sandin"]
   s.email       = 'maxx.stack15@gmail.com'
   s.homepage    = 'https://github.com/malexander15/minecraft_items'
+  s.files        = Dir.glob("{lib}/**/*") + %w(LICENSE.md README.md)
 end
