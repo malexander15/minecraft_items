@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-	s.name        = 'minecraft items'
+	s.name        = 'minecraft_items'
   s.version     = '0.1.0'
   s.licenses    = ['MIT']
   s.summary     = "A list of most minecraft items"
