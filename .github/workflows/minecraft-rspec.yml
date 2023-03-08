@@ -1,4 +1,3 @@
-#some stuff because github doesn't like empty folders/files?
 name: Run rspec workflow
 
 on:
@@ -10,17 +9,20 @@ permissions:
 
 jobs:
   test:
-
-    runs-on: ubuntu-latest
     strategy:
       matrix:
-        ruby-version: ['2.7', '3.0']
-
+        gemfile: [Gemfile]
+        ruby-version: ['3.0']
+    runs-on: ubuntu-latest
+    env: # $BUNDLE_GEMFILE must be set at the job level, so it is set for all steps
+      BUNDLE_GEMFILE: ${{ matrix.gemfile }}
     steps:
-    - uses: actions/checkout@v3
-    - name: Install Bundler
-      run: gem install bundler
-    - name: Bundle Install
-      run: bundle install --jobs 4 --retry 3
-    - name: Run tests
-      run: bundle exec rspec spec*/
+      - uses: actions/checkout@v3
+      - name: Setup Ruby Gems and bundler
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby-version }}
+          bundler-cache: true # runs bundle install and caches installed gems automatically
+          bundler: ${{ env.BUNDLER_VERSION || 'default' }}
+          rubygems: ${{ env.RUBYGEMS_VERSION || 'latest' }}
+      - run: bundle exec rake
