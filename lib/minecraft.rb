@@ -13,6 +13,7 @@ class Minecraft #make a Minecraft parent class
       else
         super
       end
-    end 
+    end
   end
 end
+
