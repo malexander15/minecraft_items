@@ -14,12 +14,15 @@ jobs:
         gemfile: [Gemfile]
         ruby-version: ['3.0']
     runs-on: ubuntu-latest
+    container:
+      image: ruby:3.0.0
+
     env: # $BUNDLE_GEMFILE must be set at the job level, so it is set for all steps
       BUNDLE_GEMFILE: ${{ matrix.gemfile }}
     steps:
       - name: Setup bundler
         run: gem install bundler
-      - name: Run Bundle INstall
+      - name: Run Bundle Install
         run: bundle install
       - uses: ruby/setup-ruby@v1
         with:
