@@ -17,8 +17,10 @@ jobs:
     env: # $BUNDLE_GEMFILE must be set at the job level, so it is set for all steps
       BUNDLE_GEMFILE: ${{ matrix.gemfile }}
     steps:
-      - uses: actions/checkout@v3
-      - name: Setup Ruby Gems and bundler
+      - name: Setup bundler
+        run: gem install bundler
+      - name: Run Bundle INstall
+        run: bundle install
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby-version }}
