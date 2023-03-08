@@ -10,4 +10,5 @@ Gem::Specification.new do |s|
   s.email       = 'maxx.stack15@gmail.com'
   s.homepage    = 'https://github.com/malexander15/minecraft_items'
   s.files       = Dir['lib/**/*']
+  s.require_paths = ["lib"]
 end
