@@ -1,7 +1,7 @@
 require 'active_support/core_ext/hash/indifferent_access'
 require 'block_types' #first require block types. This includes the modules that contain the methods for loading the minecraft item hashes
 
-class Minecraft #make a Minecraft parent class
+class MinecraftItems #make a Minecraft parent class
   class << self #and make all the methods inside class methods?
     include BlockTypes 
     #if not it will default to this which is just an error method
