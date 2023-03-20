@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
 	s.name        = 'minecraft_items'
-  s.version     = '0.1.3'
+  s.version     = '0.1.4'
   s.licenses    = ['MIT']
   s.summary     = "A list of most minecraft items"
   s.description = "With a few simple commands return all the types of blocks as well as each types variant."
