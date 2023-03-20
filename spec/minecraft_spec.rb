@@ -424,4 +424,16 @@ describe MinecraftItems do
     expect(MinecraftItems.workstation_variants).to eq(workstation_variants)
     end
   end
+
+  context "all variants" do
+    it "returns a hash of all variants" do
+      expect(MinecraftItems.all_variants.keys).to include("nether_wart_variants")
+    end
+  end
+
+  context "all_types" do
+    it "returns a hash of all all types" do
+      expect(MinecraftItems.all_types.keys).to include("aquatic_types")
+    end
+  end
 end
