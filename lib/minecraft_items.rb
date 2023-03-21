@@ -1,4 +1,5 @@
 require 'active_support/core_ext/hash/indifferent_access'
+require 'active_support/core_ext/string/inflections'
 require 'block_types'
 
 class MinecraftItems
@@ -6,7 +7,9 @@ class MinecraftItems
     include BlockTypes
 
     def method_missing(method_name)
-      if method_name.to_s.include?("all_types")
+      if method_name.to_s.include?("all_variants_and_types")
+      (minecraft_variants.values + minecraft_types.values).flatten.map { |type_or_variant| type_or_variant.titleize}.sort
+      elsif method_name.to_s.include?("all_types")
         minecraft_types
       elsif method_name.to_s.include?("all_variants")
         minecraft_variants

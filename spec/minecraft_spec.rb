@@ -436,4 +436,11 @@ describe MinecraftItems do
       expect(MinecraftItems.all_types.keys).to include("aquatic_types")
     end
   end
+
+  context "all types and variants" do
+    it "returns an array of all minecraft types and variants" do
+      expect(MinecraftItems.all_variants_and_types.is_a?(Array)).to be_truthy
+      expect(MinecraftItems.all_variants_and_types.length > 0).to be_truthy
+    end
+  end
 end
