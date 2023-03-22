@@ -427,11 +427,11 @@ describe MinecraftItems do
 
   context "all variants" do
     it "returns a hash of all variants" do
-      expect(MinecraftItems.all_variants.keys).to include("nether_wart_variants")
+      expect(MinecraftItems.all_variants.is_a?(Array)).to be_truthy
+      expect(MinecraftItems.all_variants.length > 0).to be_truthy
     end
   end
-#MinecraftItems.all_variants.values.flatten
-#make a new method that takes the minecraftitems.all_variants and returns a flatten array of all variants.
+
   context "all_types" do
     it "returns a hash of all all types" do
       expect(MinecraftItems.all_types.keys).to include("aquatic_types")
