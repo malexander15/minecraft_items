@@ -12,7 +12,7 @@ class MinecraftItems
       elsif method_name.to_s.include?("all_types")
         minecraft_types
       elsif method_name.to_s.include?("all_variants")
-        minecraft_variants
+        minecraft_variants.values.flatten.map { |variants| variants.titleize }.sort
       elsif method_name.to_s.include?("_variants")
         minecraft_variants[method_name]
       elsif method_name.to_s.include?("_types")
@@ -23,3 +23,4 @@ class MinecraftItems
     end 
   end
 end
+
