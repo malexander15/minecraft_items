@@ -1,5 +1,13 @@
 A Ruby implementation of lists of MineCraft items (also known as blocks), also acting as an exercise in metaprogramming.
 
+# Installation
+
+In your Gemfile, add
+```
+gem "minecraft_items"
+
+```
+
 Example usage:
 
 All the items in minecraft are stored within 2 categories.
